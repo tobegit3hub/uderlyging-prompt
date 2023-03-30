@@ -30,7 +30,7 @@ Run the demo OpenAI client.
 ./demo/openai_demo.py
 ```
 
-Check out the prompts history.
+Check out the server log or prompts history.
 
 ```
 cat ./underlying-prompts.log
