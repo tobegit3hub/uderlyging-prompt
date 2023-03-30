@@ -6,6 +6,8 @@ It is helpful for prompt engineering and records all the OpenAI requests and res
 
 ## Install
 
+Install with [underlying-prompts package](https://pypi.org/project/underlying-prompts/).
+
 ```
 pip install underlying-prompts
 ```
@@ -18,7 +20,7 @@ Start the server.
 underlying-prompts
 ```
 
-Set the environment for clients.
+Set the environment for LLM applications.
 
 ```
 export OPENAI_API_BASE=http://127.0.0.1:8888/v1
@@ -30,7 +32,7 @@ Run the demo OpenAI client.
 ./demo/openai_demo.py
 ```
 
-Check out the server log or prompts history.
+The prompts will be recorded in server and history log.
 
 ```
 cat ./underlying-prompts.log
@@ -48,7 +50,7 @@ unset OPENAI_API_BASE
 
 ## How It Works
 
-It is the simple HTTP server to redirect requests from [openai library](https://github.com/openai/openai-python). The user's requests will be fully forwards to OpenAI API server and it helps to records the underlying request data and response data.
+It is the simple HTTP server to redirect requests for [openai library](https://github.com/openai/openai-python). The user's requests will be completely forwarded to OpenAI API server and it helps to records the underlying request and response data.
 
 Here is the sample code of [server.py](./underlying_prompts/server.py).
 
